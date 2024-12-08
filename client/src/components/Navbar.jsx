@@ -4,21 +4,8 @@ import React, { useState } from 'react'
 import axios from 'axios';
 
 const Navbar = () => {
-  const path = useLocation().pathname;
-  const navigate=useNavigate()
-  const [isLoading,setIsLoading]=useState(false)
 
-  const handleLogout=async()=>{
-    try {
-      setIsLoading(true)
-      await axios.post("http://localhost:5173logout")
-      navigate('/')
-    } catch (error) {
-      console.log(error)
-    }finally{
-      setIsLoading(false)
-    }
-  }
+  
 
   return (
     <Box sx={{width:"100%",display:"flex",justifyContent:"space-between",backgroundColor:"#ffffff",py:2}}>
@@ -27,9 +14,7 @@ const Navbar = () => {
             Admin <span className='primary-color-text'>Panel</span> 
             </Typography>
         </Box>
-        <Box sx={{px:4}}>
-          <Button disabled={isLoading} onClick={handleLogout} className='primary-color-text' >Logout</Button>
-        </Box>
+        
     </Box>
   )
 }

@@ -15,8 +15,8 @@ function App() {
     <ThemeProvider theme={theme}>
     <ToastContainer />
       <Routes>
-        <Route path="/dashboard" element={<Dashboard/>} />
-        <Route path="/" element={<Login />} />
+        {/* <Route path="/dashboard" element={<Dashboard/>} /> */}
+        <Route path="/" element={<Dashboard />} />
       </Routes>
     </ThemeProvider>
     </BrowserRouter>
