@@ -1,13 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import {InjectModel} from '@nestjs/mongoose'
-import mongoose from 'mongoose';
-import { Admin } from './telegram/schemas/admin.schema';
 
 @Injectable()
 export class AppService {
   constructor(
-    @InjectModel(Admin.name)
-    private adminModel=mongoose.Model<Admin>
+    
    ){ }
 
    googleLogin(req){
@@ -24,13 +20,13 @@ export class AppService {
     return req.user;
    }
 
-  async create(data:any){
-    return this.adminModel.create(data);
-  }
+  // async create(data:any){
+  //   return this.adminModel.create(data);
+  // }
 
-  async findOne(data:any){
-      return this.adminModel.findOne(data);
+  // async findOne(data:any){
+  //     return this.adminModel.findOne(data);
     
-  }
+  // }
 
 }
