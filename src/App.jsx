@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Login from "./pages/Login"
 import { ThemeProvider } from "@mui/material"
 import { theme } from "./utils/MuiComponents"
 import './App.css'
@@ -15,7 +14,6 @@ function App() {
     <ThemeProvider theme={theme}>
     <ToastContainer />
       <Routes>
-        {/* <Route path="/dashboard" element={<Dashboard/>} /> */}
         <Route path="/" element={<Dashboard />} />
       </Routes>
     </ThemeProvider>
